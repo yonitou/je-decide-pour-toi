@@ -1,0 +1,26 @@
+{
+	"cli": { "requireCommit": true, "version": "2.1.0" },
+	"build": {
+		"preview": {
+			"distribution": "internal",
+			"releaseChannel": "preview",
+			"env": {
+				"APP_ENV": "preview"
+			}
+		},
+		"production": {
+			"releaseChannel": "production",
+			"env": {
+				"APP_ENV": "production"
+			}
+		}
+	},
+	"submit": {
+		"production": {
+			"ios": {
+				"ascAppId": "1494676431",
+				"appleTeamId": "T2JN7JTM5G"
+			}
+		}
+	}
+}

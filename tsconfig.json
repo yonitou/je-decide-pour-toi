@@ -1,0 +1,37 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"esModuleInterop": true,
+		"jsx": "react-native",
+		"lib": ["DOM", "ESNext"],
+		"moduleResolution": "node",
+		"noEmit": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"noImplicitAny": true,
+		"target": "ESNext",
+		"baseUrl": "./",
+		"typeRoots": ["node_modules/@types", "src/image.d.ts", "src/font.d.ts"],
+		"paths": {
+			"@Components/*": ["./src/components/*"],
+			"@Context/*": ["./src/context/*"],
+			"@Assets/*": ["./src/assets/*"],
+			"@Constants/*": ["./src/constants/*"],
+			"@Api/*": ["./src/api/*"],
+			"@Hooks/*": ["./src/hooks/*"],
+			"@Icons/*": ["./src/icons/*"],
+			"@Navigators/*": ["./src/navigators/*"],
+			"@Screens/*": ["./src/screens/*"],
+			"@Types/*": ["./src/types/*"],
+			"@Utils/*": ["./src/utils/*"]
+		}
+	},
+	"exclude": [
+		"node_modules",
+		"babel.config.js",
+		"metro.config.js",
+		"lib/withSimulatorExcludedArchitecture.ts",
+		"coverage"
+	],
+	"extends": "expo/tsconfig.base"
+}

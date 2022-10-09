@@ -1,0 +1,8 @@
+*.yml
+node_modules
+assets
+*.html
+coverage
+.expo
+package.json
+package-lock.json

@@ -1,14 +1,13 @@
-node_modules/
+node_modules*/
+builds/
+.env*
+payload*
 .expo/
-dist/
-npm-debug.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
-*.orig.*
-web-build/
-
-# macOS
+.vscode/
+.idea/
+hygo.jks
+*.py
 .DS_Store
+google-service-account-api-key.json
+google-services.json
+coverage/
