@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "expo": "~46.0.13",
-    "expo-status-bar": "~1.4.0",
     "react": "18.0.0",
     "@react-navigation/elements": "^1.2.1",
     "@react-navigation/native": "^6.0.4",
