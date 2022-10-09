@@ -1,11 +1,13 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import * as Updates from "expo-updates";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import * as SplashScreen from "expo-splash-screen";
 import archivoBlack from "@Assets/fonts/Archivo-Black.ttf";
 import archivoNarrow from "@Assets/fonts/Archivo-Narrow.ttf";
 import { useFonts } from "expo-font";
 import { useCallback, useEffect } from "react";
-import { fontFamilyEnum } from "@Types/font.types";
+
+import AppNavigationContainer from "@Navigators/index";
 
 export default (): JSX.Element => {
 	const [loaded] = useFonts({
@@ -44,24 +46,16 @@ export default (): JSX.Element => {
 	}
 
 	return (
-		<View style={styles.container} onLayout={onLayoutRootView}>
-			<Text style={styles.title}>Coucou Yoyo</Text>
-			<Text style={styles.subtitle}>Coucou Ghita</Text>
-		</View>
+		<SafeAreaProvider>
+			<View style={styles.container} onLayout={onLayoutRootView}>
+				<AppNavigationContainer />
+			</View>
+		</SafeAreaProvider>
 	);
 };
 
 const styles = StyleSheet.create({
-	title: {
-		fontFamily: fontFamilyEnum.ArchivoBlack,
-	},
-	subtitle: {
-		fontFamily: fontFamilyEnum.ArchivoNarrow,
-	},
 	container: {
 		flex: 1,
-		backgroundColor: "#fff",
-		alignItems: "center",
-		justifyContent: "center",
 	},
 });

@@ -8,7 +8,7 @@ enum ENV_ENUM {
 }
 
 const bundleConfig = {
-	apiUrl: "https://localhost:3000",
+	apiUrl: "https://je-decide-pour-toi-staging.herokuapp.com/api/v1",
 	name: "Je décide pour toi (Staging)",
 	bundleId: "com.je-decide-pour-toi.app.preview",
 	iconPath: "./src/assets/icon-preview.png",
@@ -17,7 +17,7 @@ const bundleConfig = {
 };
 
 if (process.env.APP_ENV === ENV_ENUM.PRODUCTION) {
-	bundleConfig.apiUrl = "https://localhost:3000";
+	bundleConfig.apiUrl = "https://je-decide-pour-toi.herokuapp.com/api/v1";
 	bundleConfig.name = "Je décide pour toi";
 	bundleConfig.bundleId = "com.je-decide-pour-toi.app";
 	bundleConfig.iconPath = "./src/assets/icon.png";
