@@ -22,7 +22,7 @@ export default (): JSX.Element => {
 
 	return (
 		<View style={styles.container}>
-			<Text>Coucou ghita</Text>
+			<Text>Coucou yoyo</Text>
 		</View>
 	);
 };
