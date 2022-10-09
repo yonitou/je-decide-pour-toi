@@ -7,7 +7,7 @@
     "lint": "tsc && eslint --ext .js,.jsx,.ts,.tsx ./ --max-warnings=0 && ts-prune",
     "publish:preview": "APP_ENV='preview' expo-cli publish --release-channel preview",
     "publish:production": "APP_ENV='production' expo-cli publish --release-channel production",
-    "build:preview": "eas build --profile preview -p all",
+    "build:preview": "eas build --profile preview -p ios",
     "build:production": "EXPO_APPLE_APP_SPECIFIC_PASSWORD=$EXPO_APPLE_APP_SPECIFIC_PASSWORD eas build --profile production -p all --auto-submit",
     "prettier:check": "prettier --check .",
     "prettier:write": "prettier --write .",
