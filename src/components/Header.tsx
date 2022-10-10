@@ -4,6 +4,7 @@ import { getDefaultHeaderHeight, Header as RNHeader } from "@react-navigation/el
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Icons from "@Icons/Icons";
 import { fontFamilyEnum } from "@Types/font.types";
+import { HORIZONTAL_PADDING } from "@Constants/styleValues";
 
 interface HeaderProps {
 	title?: string;
@@ -41,8 +42,6 @@ const Header = ({
 		top
 	);
 	const sideButtonSize = headerHeight - top;
-
-	const HORIZONTAL_PADDING = 16;
 
 	return (
 		<View style={styles.container}>

@@ -1,3 +1,4 @@
+import { HORIZONTAL_PADDING, VERTICAL_PADDING } from "@Constants/styleValues";
 import { StyleSheet, StatusBar, View, StyleProp, ViewStyle } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
@@ -16,8 +17,8 @@ const SafeArea = ({
 }: SafeAreaProps): JSX.Element => {
 	const { bottom } = useSafeAreaInsets();
 
-	const paddingBottom = withBottomPadding ? Math.max(30, bottom) : 0;
-	const paddingHorizontal = withHorizontalPadding ? 16 : 0;
+	const paddingBottom = withBottomPadding ? Math.max(VERTICAL_PADDING, bottom) : 0;
+	const paddingHorizontal = withHorizontalPadding ? HORIZONTAL_PADDING : 0;
 
 	return (
 		<View
