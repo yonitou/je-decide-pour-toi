@@ -15,5 +15,5 @@ export const getHumors = async (): Promise<humorType[]> => {
 
 export const getAction = async (id: number): Promise<actionType> => {
 	const response = await api.get(`/humeurs/${id}`);
-	return response?.data?.missions?.[0];
+	return response?.data;
 };
