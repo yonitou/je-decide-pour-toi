@@ -3,15 +3,15 @@ import HumorIcon from "@Components/HumorIcon";
 import SafeArea from "@Components/SafeArea";
 import { fontFamilyEnum } from "@Types/font.types";
 import { View, StyleSheet, Text, ActivityIndicator } from "react-native";
-import { FlatList } from "react-native-gesture-handler";
+import { FlatList, TouchableOpacity } from "react-native-gesture-handler";
 
 import { HomeScreenProps } from "./screen.types";
 
-const HomeScreen = ({ humors }: HomeScreenProps): JSX.Element => {
+const HomeScreen = ({ humors, onPress }: HomeScreenProps): JSX.Element => {
 	const sortedHumors = humors?.sort((a, b) => a.icon?.localeCompare(b.icon));
 	return (
 		<View style={styles.container}>
-			<Header withProfileBtn />
+			<Header withProfileBtn={false} />
 			<SafeArea withBottomPadding={false}>
 				<Text style={styles.title}>Salut,</Text>
 				<Text style={styles.subtitle}>Comment vas-tu aujourd&apos;hui?</Text>
@@ -24,19 +24,20 @@ const HomeScreen = ({ humors }: HomeScreenProps): JSX.Element => {
 						renderItem={({ item }) => {
 							return (
 								<View style={styles.humorWrapper}>
-									<View
+									<TouchableOpacity
 										key={item?.id}
 										style={{
 											...styles.humor,
 											backgroundColor: item.color || "hsla(186, 13%, 55%, 1)",
 										}}
+										onPress={() => onPress(item)}
 									>
 										{item.icon ? (
 											<HumorIcon humor={item} fill="white" width={70} height={70} />
 										) : (
 											<Text style={styles.notAvailableText}>Bientôt dispo</Text>
 										)}
-									</View>
+									</TouchableOpacity>
 								</View>
 							);
 						}}

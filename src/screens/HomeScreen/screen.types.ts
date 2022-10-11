@@ -4,6 +4,7 @@ import { humorType } from "@Types/humor.types";
 
 export interface HomeScreenProps {
 	humors: humorType[];
+	onPress: (humor: humorType) => void;
 }
 
 export interface HomeScreenContainerProps {

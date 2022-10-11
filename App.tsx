@@ -8,6 +8,7 @@ import { useFonts } from "expo-font";
 import { useCallback, useEffect } from "react";
 
 import AppNavigationContainer from "@Navigators/index";
+import SnackbarProvider from "@Context/SnackbarContext";
 
 export default (): JSX.Element => {
 	const [loaded] = useFonts({
@@ -47,9 +48,11 @@ export default (): JSX.Element => {
 
 	return (
 		<SafeAreaProvider>
-			<View style={styles.container} onLayout={onLayoutRootView}>
-				<AppNavigationContainer />
-			</View>
+			<SnackbarProvider>
+				<View style={styles.container} onLayout={onLayoutRootView}>
+					<AppNavigationContainer />
+				</View>
+			</SnackbarProvider>
 		</SafeAreaProvider>
 	);
 };

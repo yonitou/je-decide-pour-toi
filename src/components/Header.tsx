@@ -17,6 +17,7 @@ interface HeaderProps {
 	textStyle?: Record<string, string>;
 	headerTitleContainerStyle?: StyleProp<ViewStyle>;
 	withProfileBtn: boolean;
+	chevronColor?: string;
 }
 
 const Header = ({
@@ -27,6 +28,7 @@ const Header = ({
 	textStyle,
 	customLeft,
 	customTitle,
+	chevronColor = "black",
 	backgroundColor,
 	subtitle,
 	headerTitleContainerStyle,
@@ -57,7 +59,7 @@ const Header = ({
 						customLeft ??
 						(onBackPress && (
 							<TouchableOpacity onPress={onBackPress}>
-								<Icons.ArrowBack width={sideButtonSize} height={sideButtonSize} />
+								<Icons.ArrowBack width={sideButtonSize} height={sideButtonSize} fill={chevronColor} />
 							</TouchableOpacity>
 						))
 					);
