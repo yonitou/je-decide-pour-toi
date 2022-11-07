@@ -2,7 +2,7 @@ import Header from "@Components/Header";
 import HumorIcon from "@Components/HumorIcon";
 import SafeArea from "@Components/SafeArea";
 import { fontFamilyEnum } from "@Types/font.types";
-import { View, StyleSheet, Text, ActivityIndicator } from "react-native";
+import { View, StyleSheet, Text, ActivityIndicator, TextInput } from "react-native";
 import { FlatList, TouchableOpacity } from "react-native-gesture-handler";
 
 import { HomeScreenProps } from "./screen.types";
@@ -13,6 +13,7 @@ const HomeScreen = ({ humors, onPress }: HomeScreenProps): JSX.Element => {
 		<View style={styles.container}>
 			<Header withProfileBtn={false} />
 			<SafeArea withBottomPadding={false}>
+				<TextInput style={{ backgroundColor: "green", width: 200, height: 30, fontSize: 20, color: "white" }} />
 				<Text style={styles.title}>Salut,</Text>
 				<Text style={styles.subtitle}>Comment vas-tu aujourd&apos;hui?</Text>
 				{humors?.length > 0 ? (
