@@ -19,6 +19,7 @@
 			}
 		},
 		"production": {
+			"developmentClient": true,
 			"releaseChannel": "production",
 			"env": {
 				"APP_ENV": "production"

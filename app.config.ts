@@ -12,8 +12,8 @@ const bundleConfig = {
 	name: "Je décide pour toi (Staging)",
 	bundleId: "com.je-decide-pour-toi.app.preview",
 	iconPath: "./src/assets/icon-preview.png",
-	buildNumber: "3",
-	version: "1.0.2",
+	buildNumber: "4",
+	version: "1.0.3",
 };
 
 if (process.env.APP_ENV === ENV_ENUM.PRODUCTION) {
