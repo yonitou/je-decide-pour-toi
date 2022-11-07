@@ -13,13 +13,13 @@
 			}
 		},
 		"simulator": {
+			"developmentClient": true,
 			"extends": "preview",
 			"ios": {
 				"simulator": true
 			}
 		},
 		"production": {
-			"developmentClient": true,
 			"releaseChannel": "production",
 			"env": {
 				"APP_ENV": "production"
